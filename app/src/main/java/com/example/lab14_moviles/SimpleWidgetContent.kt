@@ -26,7 +26,7 @@ class SimpleWidgetContent : GlanceAppWidget() {
             }
         }
     }
-
+    
     @Composable
     private fun MyContent() {
         Column(
@@ -41,8 +41,13 @@ class SimpleWidgetContent : GlanceAppWidget() {
             )
             Row(horizontalAlignment = Alignment.CenterHorizontally) {
                 Button(
-                    text = "Página Principal",
+                    text = "Principal",
                     onClick = actionStartActivity<MainActivity>()
+                )
+                androidx.glance.layout.Spacer(modifier = GlanceModifier.padding(4.dp))
+                Button(
+                    text = "Segunda",
+                    onClick = actionStartActivity<SecondActivity>()
                 )
             }
         }

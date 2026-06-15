@@ -24,6 +24,12 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".SecondActivity"
+            android:exported="false"
+            android:label="Segunda Vista"
+            android:theme="@style/Theme.Lab14_Moviles" />
+
         <receiver android:name=".SimpleWidget"
             android:exported="true">
             <intent-filter>
@@ -32,6 +38,16 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/simple_widget_info" />
+        </receiver>
+
+        <receiver android:name=".ProjectWidget"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/project_widget_info" />
         </receiver>
     </application>
 
